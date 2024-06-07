@@ -6,7 +6,7 @@ export function JsonConverter({ }) {
     const jsonConvertDummyRequest = async (options: { file: any; onSuccess?: any; onError?: any; onProgress?: any }) => {
         const { onSuccess, onError, file, onProgress } = options;
 
-        let _json = file as Blob;
+        let _json = file as File;
 
         const fileReader = new FileReader();
         fileReader.readAsText(_json, "UTF-8");
